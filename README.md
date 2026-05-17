@@ -55,8 +55,10 @@ src/
 
 ---
 
-##Diagram ER
-
+## Diagram ER
+<p align="center">
+  <img src="./docs/DiagramER.svg" width="900"/>
+</p>
 
 
 
