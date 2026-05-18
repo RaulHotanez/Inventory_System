@@ -4,8 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Inventory.Infrastructure.Persistence.Configurations;
 
-public class InventoryMovementConfiguration
-    : IEntityTypeConfiguration<InventoryMovement>
+public class InventoryMovementConfiguration : IEntityTypeConfiguration<InventoryMovement>
 {
     public void Configure(EntityTypeBuilder<InventoryMovement> builder)
     {

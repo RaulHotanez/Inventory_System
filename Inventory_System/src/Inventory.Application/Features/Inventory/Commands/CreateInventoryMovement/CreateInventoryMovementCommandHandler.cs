@@ -1,6 +1,7 @@
 ﻿using Inventory.Application.Common.Exceptions;
 using Inventory.Application.Common.Models;
 using Inventory.Application.Interfaces.Persistence;
+using Inventory.Application.Interfaces.Services;
 using Inventory.Domain.Entities;
 using Inventory.Domain.Enums;
 using MediatR;
@@ -11,10 +12,11 @@ namespace Inventory.Application.Features.Inventory.Commands.CreateInventoryMovem
 public class CreateInventoryMovementCommandHandler : IRequestHandler<CreateInventoryMovementCommand, Result>
 {
     private readonly IApplicationDbContext _context;
-
-    public CreateInventoryMovementCommandHandler(IApplicationDbContext context)
+    private readonly ICurrentUserService _currentUserService;
+    public CreateInventoryMovementCommandHandler(IApplicationDbContext context, ICurrentUserService currentUserService)
     {
         _context = context;
+        _currentUserService = currentUserService;
     }
 
     public async Task<Result> Handle(CreateInventoryMovementCommand request, CancellationToken cancellationToken)
@@ -66,7 +68,7 @@ public class CreateInventoryMovementCommandHandler : IRequestHandler<CreateInven
             PreviousStock = previousStock,
             NewStock = product.Stock,
             Reference = request.Reference,
-            UserId = Guid.Empty
+            UserId = _currentUserService.UserId
         };
 
         await _context.InventoryMovements.AddAsync(movement, cancellationToken);
