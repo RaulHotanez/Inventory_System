@@ -1,6 +1,4 @@
-﻿using System.Net;
-using System.Text.Json;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace Inventory.API.Middlewares;
 

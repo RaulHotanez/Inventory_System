@@ -3,7 +3,6 @@ using Inventory.Application.Features.Products.Commands.CreateProduct;
 using Inventory.Application.Features.Products.Commands.UpdateProduct;
 using Inventory.Application.Features.Products.DTOs;
 using Inventory.Domain.Entities;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Inventory.Application.Features.Products.Mappings;
 
