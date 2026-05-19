@@ -2,13 +2,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
+
 namespace Inventory.Infrastructure.Persistence.Configurations
 {
-    public class WarehouseConfiguration : IEntityTypeConfiguration<Warehouse>
+    public class SupplierConfiguration : IEntityTypeConfiguration<Supplier>
     {
-        public void Configure(EntityTypeBuilder<Warehouse> builder)
+        public void Configure(EntityTypeBuilder<Supplier> builder)
         {
-            builder.ToTable("Warehouse");
+            builder.ToTable("Suppliers");
 
             builder.HasKey(x => x.Id);
 

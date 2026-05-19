@@ -23,6 +23,8 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
 
     public DbSet<Warehouse> Warehouses => Set<Warehouse>();
 
+    public DbSet<Supplier> Suppliers => Set<Supplier>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

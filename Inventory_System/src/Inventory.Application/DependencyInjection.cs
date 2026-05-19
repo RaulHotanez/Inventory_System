@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using Inventory.Application.Common.Behaviors;
-using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Inventory.Application;
