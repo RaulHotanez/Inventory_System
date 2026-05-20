@@ -22,6 +22,5 @@ public class Product : AuditableEntity
 
     public Category Category { get; set; } = null!;
 
-    public ICollection<InventoryMovement> InventoryMovements { get; set; }
-        = new List<InventoryMovement>();
+    public ICollection<InventoryMovement> InventoryMovements { get; set; } = new List<InventoryMovement>();
 }

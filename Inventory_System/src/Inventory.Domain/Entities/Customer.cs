@@ -10,7 +10,6 @@ namespace Inventory.Domain.Entities
 
         public string Phone { get; set; } = string.Empty;
 
-        public ICollection<SalesOrder> SalesOrders { get; set; }
-            = new List<SalesOrder>();
+        public ICollection<SalesOrder> SalesOrders { get; set; } = new List<SalesOrder>();
     }
 }
