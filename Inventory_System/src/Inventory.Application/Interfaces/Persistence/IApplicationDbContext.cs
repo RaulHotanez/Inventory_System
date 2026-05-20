@@ -17,9 +17,12 @@ public interface IApplicationDbContext
     DbSet<Role> Roles { get; }
 
     DbSet<InventoryMovement> InventoryMovements { get; }
+
     DbSet<Supplier> Suppliers { get; }
 
     DbSet<Customer> Customers { get; }
+
+    DbSet<SalesOrder> SalesOrders { get; }
 
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

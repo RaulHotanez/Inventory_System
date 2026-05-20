@@ -13,7 +13,6 @@ namespace Inventory.Domain.Entities
 
         public OrderStatus Status { get; set; }
 
-        public ICollection<SalesOrderItem> Items { get; set; }
-            = new List<SalesOrderItem>();
+        public ICollection<SalesOrderItem> Items { get; set; } = new List<SalesOrderItem>();
     }
 }
