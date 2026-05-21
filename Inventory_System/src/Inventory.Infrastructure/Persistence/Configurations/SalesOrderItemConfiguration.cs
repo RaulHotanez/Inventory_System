@@ -1,0 +1,30 @@
+﻿using Inventory.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace Inventory.Infrastructure.Persistence.Configurations
+{
+    public class SalesOrderItemConfiguration : IEntityTypeConfiguration<SalesOrderItem>
+    {
+        public void Configure(EntityTypeBuilder<SalesOrderItem> builder)
+        {
+            builder.ToTable("SalesOrderItems");
+
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.Quantity)
+                .IsRequired();
+
+            builder.Property(x => x.Price)
+                .HasColumnType("decimal(18,2)");
+
+            builder.HasOne(x => x.SalesOrder)
+                .WithMany(x => x.Items)
+                .HasForeignKey(x => x.SalesOrderId);
+
+            builder.HasOne(x => x.Product)
+                .WithMany()
+                .HasForeignKey(x => x.ProductId);
+        }
+    }
+}
