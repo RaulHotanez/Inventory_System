@@ -1,5 +1,4 @@
-﻿
-using Inventory.Domain.Entities;
+﻿using Inventory.Domain.Entities;
 using Inventory.Domain.Interfaces.Repositories;
 using Inventory.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
