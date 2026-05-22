@@ -27,5 +27,7 @@ public interface IApplicationDbContext
     DbSet<SalesOrderItem> SalesOrderItems { get; }
 
     DbSet<PurchaseOrder> PurchaseOrders { get; }
+
+    DbSet<PurchaseOrderItem> PurchaseOrderItems { get; }
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }
