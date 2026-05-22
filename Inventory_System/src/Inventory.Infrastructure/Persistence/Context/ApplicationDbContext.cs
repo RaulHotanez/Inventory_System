@@ -30,6 +30,8 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
 
     public DbSet<SalesOrderItem> SalesOrderItems => Set<SalesOrderItem>();
 
+    public DbSet<PurchaseOrder> PurchaseOrders => Set<PurchaseOrder>();
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

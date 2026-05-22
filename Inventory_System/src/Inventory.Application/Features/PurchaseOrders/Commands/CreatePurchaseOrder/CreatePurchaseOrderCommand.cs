@@ -2,11 +2,11 @@
 using Inventory.Domain.Enums;
 using MediatR;
 
-namespace Inventory.Application.Features.SalesOrders.Commands.CreateSalesOrder
+namespace Inventory.Application.Features.PurchaseOrders.Commands.CreatePurchaseOrder
 {
-    public class CreateSalesOrderCommand : IRequest<Result>
+    public class CreatePurchaseOrderCommand : IRequest<Result>
     {
-        public Guid CustomerId { get; set; }
+        public Guid SupplierId { get; set; }
 
         public decimal Total { get; set; }
 

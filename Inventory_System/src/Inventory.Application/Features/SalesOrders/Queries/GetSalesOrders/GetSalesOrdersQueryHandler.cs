@@ -1,5 +1,4 @@
-﻿using Inventory.Application.Common.Models;
-using Inventory.Application.Features.SalesOrders.DTOs;
+﻿using Inventory.Application.Features.SalesOrders.DTOs;
 using Inventory.Application.Interfaces.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
